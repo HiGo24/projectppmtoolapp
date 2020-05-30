@@ -9,7 +9,8 @@ import {BrowserRouter as Router , Route } from 'react-router-dom';
 import {Provider} from "react-redux";
 import store from "./store";
 import UpdateProject from "./Components/projects/UpdateProject";
-
+import ProjectBoard from "./Components/ProjectBoard/ProjectBoard";
+import AddProjectTask from "./Components/ProjectBoard/ProjectTasks/AddProjectTask";
 class App extends Component {
   render() {
     return (
@@ -19,6 +20,9 @@ class App extends Component {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/addProject" component={AddProject} />
           <Route path="/updateProject/:id" component={UpdateProject} />
+          <Route path="/ProjectBoard/:id" component={ProjectBoard} />
+          <Route path="/addProjectTask/:id" component={AddProjectTask} />
+          
         </Router>
       </Provider>
     );
